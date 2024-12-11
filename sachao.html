@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sách Ảo-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: underline;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: underline;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      .article {
+        background-color: #fff;
+        margin: 15px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .article h3 {
+        margin-top: 0;
+        color: #2c3e50;
+      }
+      .article p {
+        color: #555;
+        line-height: 1.6;
+      }
+      .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: rgb(37, 133, 37);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .read-more:hover {
+        background-color: #3498db;
+      }
+      h2 {
+        text-align: center;
+        color: black;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <main>
+      <div class="container">
+        <h2>Giới Thiệu Các Tài Liệu Tham Khảo</h2>
+
+        <div class="article">
+          <h3>Trang 1: Giáo Dục Và Thời Đại</h3>
+          <p>
+            Khắc phục những bất cập trong tuyển sinh 10/12/2024 13:05 GD&TĐ - Vụ
+            trưởng Vụ Giáo dục đại học cho hay, Dự thảo có nhiều điểm mới, khắc
+            phục những bất cập trong công tác tuyển sinh; trong đó có xét tuyển
+            sớm...
+          </p>
+          <a href="https://giaoducthoidai.vn/" class="read-more" target="blank"
+            >Đọc tiếp</a
+          >
+        </div>
+
+        <div class="article">
+          <h3>
+            Trang 2: Trắc nghiệm Tin học 8 kết nối Bài 14 Cấu trúc điều khiển
+          </h3>
+          <p>
+            Bài trắc nghiệm có đáp án. Câu hỏi và bài tập trắc nghiệm Tin học 8
+            Bài 14 Cấu trúc điều khiển - sách Kết nối tri thức. Học sinh luyện
+            tập bằng cách chọn đáp án của mình trong từng câu hỏi. Dưới cùng của
+            bài trắc nghiệm, có phần xem kết quả để biết bài làm của mình. Kéo
+            xuống dưới để bắt đầu.
+          </p>
+          <a
+            href="https://tech12h.com/bai-hoc/trac-nghiem-tin-hoc-8-ket-noi-bai-14-cau-truc-dieu-khien.html"
+            class="read-more"
+            target="blank"
+            >Đọc tiếp</a
+          >
+        </div>
+
+        <div class="article">
+          <h3>Trang 3: Sách Giáo Khoa Lớp 7</h3>
+          <p>
+            Sách Giáo Khoa Lớp 7 | Kết Nối Tri Thức Với Cuộc Sống | Download
+            Trọn Bộ
+          </p>
+          <a
+            href="https://sachgiaokhoa.online/lop-7-10/ket-noi-tri-thuc-voi-cuoc-song-3.html"
+            class="read-more"
+            target="blank"
+            >Đọc tiếp</a
+          >
+        </div>
+
+        <div class="article">
+          <h3>Trang 4: Nhà Xuất Bản Giáo Dục Việt Nam</h3>
+          <p>GIỚI THIỆU SGK MỚI THEO CHƯƠNG TRÌNH GDPT 2018</p>
+          <a
+            href="https://www.nxbgd.vn/chuyen-muc/gioi-thieu-sgk-moi-theo-chuong-trinh-gdpt-2018"
+            class="read-more"
+            target="blank"
+            >Đọc tiếp</a
+          >
+        </div>
+      </div>
+    </main>
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>

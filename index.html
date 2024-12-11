@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      main {
+        padding: 20px;
+      }
+      main h2 {
+        color: #333;
+        margin-bottom: 10px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      main p {
+        color: #444;
+        font-size: 20px;
+        font-family: "Times New Roman", Times, serif;
+        margin-bottom: 20px;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <main>
+      <h2>I.Giới thiệu</h2>
+      <p>
+        Chào mừng bạn đến với website thư viện ảo của trường THCS Nguyễn Trãi.
+        Bạn có thể đọc sách, mượn sách miễn phí tại đây. Thậm chí chúng tôi còn
+        có một số tài liệu tham khảo phục vụ cho các bạn học tập trong cấp THCS.
+      </p>
+      <h2>II.Ý nghĩa của việc đọc sách</h2>
+      <p>
+        Việc đọc sách mang lại rất nhiều ý nghĩa và giá trị trong cuộc sống,
+        không chỉ về mặt tri thức mà còn về mặt tinh thần và cảm xúc. Dưới đây
+        là những ý nghĩa quan trọng của việc đọc sách:
+      </p>
+
+      <p>
+        <b>1. Mở mang tri thức:</b><br />
+        Đọc sách giúp bạn tiếp cận với kiến thức mới, từ lịch sử, khoa học, văn
+        học đến kỹ năng sống và công nghệ.<br />
+        Là cách để học hỏi từ kinh nghiệm của những người đi trước.
+      </p>
+
+      <p>
+        <b>2. Rèn luyện tư duy:</b><br />
+        Đọc sách giúp cải thiện khả năng phân tích, suy luận và tư duy logic.<br />
+        Nó kích thích trí tưởng tượng và sự sáng tạo, đặc biệt khi bạn đọc các
+        câu chuyện hư cấu hoặc tiểu thuyết.
+      </p>
+
+      <p>
+        <b>3. Phát triển ngôn ngữ:</b><br />
+        Đọc sách cải thiện vốn từ vựng và kỹ năng diễn đạt.<br />
+        Giúp bạn giao tiếp hiệu quả hơn trong cuộc sống và công việc.
+      </p>
+
+      <p>
+        <b>4. Nuôi dưỡng tâm hồn:</b><br />
+        Những cuốn sách hay truyền cảm hứng, động viên và giúp bạn nhìn cuộc
+        sống tích cực hơn.<br />
+        Sách là một người bạn tinh thần, giúp bạn tìm được sự đồng cảm và hiểu
+        biết sâu sắc hơn về con người, xã hội.
+      </p>
+
+      <p>
+        <b>5. Giải trí lành mạnh:</b><br />
+        Đọc sách là cách thư giãn tuyệt vời, giúp giảm căng thẳng sau những giờ
+        làm việc và học tập.<br />
+        Thay vì lãng phí thời gian vào các hoạt động không có ích, việc đọc sách
+        giúp bạn tận dụng thời gian hiệu quả.
+      </p>
+
+      <p>
+        <b>6. Phát triển nhân cách:</b><br />
+        Những cuốn sách về đạo đức, tâm lý, hoặc câu chuyện cảm động có thể giúp
+        bạn trở thành một con người tốt hơn.<br />
+        Đọc sách giúp bạn hiểu rõ hơn về giá trị sống, lòng nhân ái và sự bao
+        dung.
+      </p>
+
+      <p>
+        <b>7. Khám phá thế giới:</b><br />
+        Sách mang lại cơ hội khám phá những nền văn hóa, vùng đất và câu chuyện
+        từ khắp nơi trên thế giới mà bạn chưa từng biết tới.<br />
+        Nó giúp bạn mở rộng tầm nhìn và sống một cuộc đời phong phú hơn.
+      </p>
+
+      <p>
+        <b>8. Hình thành thói quen tốt:</b><br />
+        Đọc sách thường xuyên là thói quen tốt giúp duy trì sự tập trung, kiên
+        nhẫn và ý thức học tập suốt đời.<br />
+        Thói quen này cũng là một tấm gương tốt để truyền cảm hứng cho gia đình
+        và bạn bè.
+      </p>
+
+      <p>
+        <b>Tóm lại:</b><br />
+        Sách không chỉ là kho tàng tri thức mà còn là "người thầy", "người bạn
+        đồng hành" trong mọi giai đoạn của cuộc sống. Đọc sách chính là đầu tư
+        vào bản thân, là cách để bạn trưởng thành và hạnh phúc hơn.
+      </p>
+    </main>
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>

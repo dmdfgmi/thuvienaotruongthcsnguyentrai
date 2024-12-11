@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sách Giáo Khoa 6-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      thead {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      th {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
+
+      td {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+        }
+
+        th,
+        td {
+          font-size: 12px;
+          padding: 8px;
+        }
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 20%;
+      }
+
+      th:nth-child(3),
+      td:nth-child(3) {
+        width: 10%;
+      }
+      th:nth-child(1),
+      td:nth-child(1) {
+        width: 5%;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      table a {
+        text-decoration: none; /* Bỏ gạch chân */
+        color: black; /* Màu chữ mặc định */
+      }
+
+      table a:hover {
+        color: black; /* Đổi màu khi di chuột */
+        text-decoration: none; /* Giữ không có gạch chân */
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <br />
+    <main>
+      <h2>Bảng sách giáo khoa lớp 6 PDF<h2>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Tên sách</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="https://drive.google.com/file/d/1FxybU76epNGy0eBvgf4gMSw3ssNcYFHT/view?pli=1" target="blank"> SGK Toán 6 tập 1 </a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://drive.google.com/file/d/1DG6VwTlSBqodpQPhQnMeYgsV3S6KwedW/view"target="blank"> SGK Toán 6 tập 2 </a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://drive.google.com/file/d/1fJkE0kxyY7ATn4MUS1wEdZjUoRL8c1sj/view"target="blank"> SGK Tiếng Anh 6 tập 1 </a> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://drive.google.com/file/d/1dfsFwtXXO_4R0g2ZCqp631VMkUvWORYt/view"target="blank"> SGK Tiếng Anh 6 tập 2 </a> </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://drive.google.com/file/d/1DS9UjUrP7VNJ1OC1LVNOOzOQvCHls_fD/view"target="blank"> SGK Văn 6 tập 1 </a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://drive.google.com/file/d/1PRDD-ZzAp0bDWP4zvenqR3kDQC05u0dh/view"target="blank"> SGK Văn 6 tập 2 </a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://drive.google.com/file/d/1gX3LBrw0J-mQiCiSDKoWDeXeAR3iWnJu/view"target="blank"> SGK Khoa học tự nhiên 6 </a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://drive.google.com/file/d/1ngCSza8byjX-dxNnICfDyY3lRKfB9SA_/view"target="blank"> SGK Mĩ thuật 6 </a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://drive.google.com/file/d/11pc-a4Lw8UU-ADaRqMgng5WvkU7EeqrS/view"target="blank"> SGK Công nghệ 6 </a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://drive.google.com/file/d/1HvhZxXp0fBOCfK3z9PaEBoPix7_gPt-L/view"target="blank"> SGK Tin học 6 </a></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://drive.google.com/file/d/1BMWBmHOaCy3CXz52be6OZr5dQxUyBcEw/view"target="blank"> SGK Lịch sử và Địa lí 6 </a> </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://drive.google.com/file/d/1IqgST4gG7J3KmZFJT3Jmt0YKxlVsWaN3/view"target="blank"> SGK Hoạt động trải nghiệm, hướng nghiệp 6 </a></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://drive.google.com/file/d/1lUMh0VVkkNlZP7CdGbwjj1gfBatzuQ56/view"target="blank"> SGK Giáo dục công dân 6</a>
+                    </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://drive.google.com/file/d/1moJtNm5gFDzbc-R9OMrS-34GWVZscDe3/view"target="blank"> SGK Giáo dục thể chất 6</a></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://drive.google.com/file/d/1D2rxF5_Ce95JXy-jbpkO0sWRvqB1P60_/view"target="blank"> SGK Âm nhạc 6</a></td>
+            </tr>
+        </table>
+    </main>
+    <br />
+    <br />
+    <br />
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>

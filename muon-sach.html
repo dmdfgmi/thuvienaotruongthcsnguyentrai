@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mượn Sách-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      th {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
+
+      td {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+        }
+
+        th,
+        td {
+          font-size: 12px;
+          padding: 8px;
+        }
+      }
+
+      th:nth-child(4),
+      td:nth-child(4) {
+        width: 25%;
+      }
+
+      th:nth-child(1),
+      td:nth-child(1) {
+        width: 8%;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 30px;
+        text-align: center;
+      }
+      table td a {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt */
+      }
+      table td a:hover {
+        text-decoration: none; /* Thêm gạch chân khi đưa chuột */
+      }
+
+      section {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      section.hidden {
+        display: none;
+      }
+      h2,
+      h3 {
+        color: #4caf50;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: calc(100% - 160px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #book-image {
+        width: 150px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 20px;
+        width: 400px;
+        z-index: 1000;
+      }
+      .modal h2 {
+        margin-top: 0;
+      }
+      .modal input,
+      .modal button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px;
+        font-size: 14px;
+      }
+      .modal button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .modal button:hover {
+        background-color: #45a049;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+      h2 {
+        font-size: 30px;
+        text-align: center;
+        color: black; /* Đổi màu chữ thành màu đen */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <br />
+    <h2>Danh Sách Các Sách</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Mã Sách</th>
+          <th>Tên Sách</th>
+          <th>Tác Giả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>
+            <a href="#" onclick="openModal('10 Huyền Thoại Viking')"
+              >10 Huyền Thoại Viking</a
+            >
+          </td>
+          <td>Michael Cox</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>
+            <a href="#" onclick="openModal('Sử Thi Hy Lạp')">Sử Thi Hy Lạp</a>
+          </td>
+          <td>Homer</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>
+            <a href="#" onclick="openModal('Vũ Trụ Cổ Đại')">Vũ Trụ Cổ Đại</a>
+          </td>
+          <td>Stephen Hawking</td>
+        </tr>
+        <tr>
+          <td>004</td>
+          <td>
+            <a
+              href="#"
+              onclick="openModal('Horrible Science – Vi Sinh Vật Vi Tính')"
+              >Horrible Science – Vi Sinh Vật Vi Tính</a
+            >
+          </td>
+          <td>Nick Arnold - Tony De Saulles</td>
+        </tr>
+        <tr>
+          <td>005</td>
+          <td>
+            <a
+              href="#"
+              onclick="openModal('206 Món Canh Dinh Dưỡng Cho Trẻ Em')"
+              >206 Món Canh Dinh Dưỡng Cho Trẻ Em</a
+            >
+          </td>
+          <td>Mai Ngọc</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <h2>Đơn Mượn Sách</h2>
+      <form>
+        <label for="bookName">Tên Sách</label>
+        <input type="text" id="bookName" readonly />
+
+        <label for="book-id">Mã sách:</label>
+        <input type="text" id="book-id" placeholder="Nhập mã sách" required />
+
+        <label for="borrowerName">Tên Người Mượn</label>
+        <input
+          type="text"
+          id="borrowerName"
+          placeholder="Nhập tên của bạn"
+          required
+        />
+        <label for="class">Lớp:</label>
+        <input type="text" id="class" placeholder="VD: 9A3" required />
+        <label for="borrowDate">Ngày Mượn Sách</label>
+        <input type="date" id="borrowDate" required />
+        <label for="borrow-time">Ngày Trả Sách:</label>
+        <input type="date" id="borrow-time" required />
+        <button type="submit">Xác Nhận Mượn Sách</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <br />
+    <br />
+    <br />
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>

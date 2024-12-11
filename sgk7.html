@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sách Giáo Khoa 7-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+
+      thead {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      table th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      th {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
+
+      td {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        table {
+          width: 100%;
+        }
+
+        th,
+        td {
+          font-size: 12px;
+          padding: 8px;
+        }
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 20%;
+      }
+
+      th:nth-child(3),
+      td:nth-child(3) {
+        width: 10%;
+      }
+      th:nth-child(1),
+      td:nth-child(1) {
+        width: 5%;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      table a {
+        text-decoration: none; /* Bỏ gạch chân */
+        color: black; /* Màu chữ mặc định */
+      }
+
+      table a:hover {
+        color: black; /* Đổi màu khi di chuột */
+        text-decoration: none; /* Giữ không có gạch chân */
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <br />
+    <main>
+      <h2>Bảng sách giáo khoa lớp 7 PDF<h2>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Tên sách</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="https://drive.google.com/file/d/1ohnMfa0kd9brP-iAmCzcr9kth_DbW4vy/view" target="blank"> SGK Toán 7 tập 1 </a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://drive.google.com/file/d/1PkIFTAHoyckXf1wCcZSKkLOMWwyH3rCr/view"target="blank"> SGK Toán 7 tập 2 </a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://drive.google.com/file/d/1oDFsNPMUCIvlrKTEPSzL4hSlUBfJ9uEO/view"target="blank"> SGK Tiếng Anh 7  </a> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://drive.google.com/file/d/1pRxOvl6vSK87XhThOtNVnEYtBj5OWeug/view"target="blank"> SGK Văn 7 tập 1 </a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://drive.google.com/file/d/1owe_3ZbByismbqdrjCD63eXkdLkhf745/view"target="blank"> SGK Văn 7 tập 2 </a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://drive.google.com/file/d/1oC7DUCuhh23hgXN-If92EAdWnopJDAwk/view"target="blank"> SGK Khoa học tự nhiên 7 </a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://drive.google.com/file/d/1bgXVKCgg_p6n7Axt2NLu5uWJEy5dGME3/view"target="blank"> SGK Mĩ thuật 7 </a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://drive.google.com/file/d/1zMnPZLujwJ0pON4QNJ56W9lXKyyr1Pim/view"target="blank"> SGK Công nghệ 7 </a></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://drive.google.com/file/d/1Rauk2cF_2aW7sqYFlM4mE-bM1LYNGY-l/view"target="blank"> SGK Tin học 7 </a></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://drive.google.com/file/d/1RsMmUDXyCNXFf_cEkVS0riWNYpOP1Jrm/view"target="blank"> SGK Lịch sử và Địa lí 7 </a> </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://drive.google.com/file/d/1wmO0VuhQmC4IOLKFvK7GHwAZxy0h4ebq/view"target="blank"> SGK Hoạt động trải nghiệm, hướng nghiệp 7 </a></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://drive.google.com/file/d/1cC8fKhk3lodet20kcAnUM6e5ivsGd1r2/view"target="blank"> SGK Giáo dục công dân 7</a>
+                    </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://drive.google.com/file/d/1C_26AJFvNPBVQufl30EHzS7VrHLysQGB/view"target="blank"> SGK Giáo dục thể chất 7</a></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://drive.google.com/file/d/1SZKUHAMUrpobQk502bQ735ZLwGy-vpTu/view"target="blank"> SGK Âm nhạc 7</a></td>
+            </tr>
+        </table>
+    </main>
+    <br />
+    <br />
+    <br />
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>

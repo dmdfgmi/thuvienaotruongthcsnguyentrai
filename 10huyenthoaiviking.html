@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Sách-Thư Viện Ảo</title>
+    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <style>
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: underline;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: underline;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 10px;
+      }
+      .navbar .menu a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .book-header {
+        display: flex;
+        gap: 20px;
+      }
+      .book-header img {
+        max-width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .book-details {
+        flex: 1;
+      }
+      .book-details h1 {
+        font-size: 24px;
+        color: #333;
+        margin: 0;
+      }
+      .book-details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+      }
+      .buttons {
+        margin-top: 10px;
+      }
+      .buttons a {
+        text-decoration: none;
+        background: #4caf50;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .buttons a:hover {
+        background: #45a049;
+      }
+      .book-content {
+        margin-top: 20px;
+      }
+      .book-content p {
+        font-size: 20px;
+        color: #333;
+        line-height: 1.6;
+      }
+      .comments-section {
+        margin-top: 30px;
+      }
+      .comments-section h2 {
+        font-size: 20px;
+        color: #333;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: white;
+      }
+      .navbar .logo img {
+        height: 40px;
+      }
+      .navbar .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      .navbar .menu a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      .navbar .right-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .navbar .right-section img {
+        height: 20px;
+        cursor: pointer;
+      }
+      .navbar .right-section .auth {
+        font-size: 14px;
+      }
+      .navbar .right-section .auth a {
+        color: white;
+        text-decoration: none;
+        margin-left: 5px;
+      }
+      .navbar .right-section .auth a:hover {
+        text-decoration: none;
+        color: green;
+      }
+      nav .search-container {
+        position: absolute;
+        right: 20px;
+      }
+      nav .search-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 3px;
+      }
+      nav .search-container button {
+        padding: 6px 10px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      nav .search-container button:hover {
+        background-color: #555;
+      }
+      .comments-section textarea {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      .comments-section button {
+        background: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .comments-section button:hover {
+        background: #45a049;
+      }
+      .comment {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+      }
+      .comment p {
+        margin: 5px 0;
+        font-size: 17px;
+        color: #555;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="img/logo.jpg" alt="Logo" /></a>
+      </div>
+      <div class="menu">
+        <a href="doc-sach.html">Đọc sách</a>
+        <a href="muon-sach.html">Mượn sách</a>
+        <a href="sachao.html">Sách ảo</a>
+      </div>
+      <div class="right-section">
+        <div class="auth">
+          <a href="dang-nhap.html">Đăng nhập</a> hoặc
+          <a href="dang-ky.html">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="search-container">
+          <input type="text" placeholder="Tìm kiếm sách..." id="search-input" />
+          <button
+            type="submit"
+            onclick="alert('Tìm kiếm: ' + document.getElementById('search-input').value)"
+          >
+            Tìm
+          </button>
+        </div>
+      </nav>
+      <h1>THƯ VIỆN ẢO TRƯỜNG THCS NGUYỄN TRÃI</h1>
+    </header>
+    <div class="container">
+      <div class="book-header">
+        <img src="img/viking.jpg" alt="10 Huyền Thoại Viking" />
+        <div class="book-details">
+          <h1>10 Huyền Thoại Viking Hay Nhất Mọi Thời Đại</h1>
+          <p><strong>Tác giả:</strong> Michael Cox</p>
+          <p><strong>Thể loại:</strong> Cổ Tích - Thần Thoại</p>
+          <div class="buttons">
+            <a
+              href="https://file.nhasachmienphi.com/pdf/nhasachmienphi-10-huyen-thoai-viking-hay-nhat-moi-thoi-dai.pdf"
+              target="blank"
+              >PDF</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="book-content">
+        <p>
+          10 Huyền Thoại Viking Hay Nhất Mọi Thời Đại được trình bày dưới nhiều
+          hình thức khác nhau. Sau mỗi huyền thoại lại có những dữ liệu kỳ thú
+          liên quan đến chủ đề. Trong thế giới cổ đại, huyền thoại luôn phổ biến
+          ở khắp nơi. Ngoài tác dụng giải trí, nó còn giúp con người tìm ra một
+          ý nghĩa cho cái thế giới hỗn độn và đầy thù địch ở xung quanh. Mười
+          huyền thoại rởn tóc gáy trong tập sách này đều kể về những cuộc phiêu
+          lưu của các vị thần được người Na Uy, Đan Mạch, Thụy Điển (Bắc Âu) và
+          Iceland thờ phụng vào thời kỳ trước công nguyên (CN). Những người này
+          được gọi chung là người Viking. Suốt thời kỳ người Viking (hay còn gọi
+          là người Na Uy cổ) hoành hành bá đạo thông qua những chuyến đi vơ vét
+          và cướp bóc vào khoảng năm 750-1050 trước CN, các huyền thoại luôn là
+          nguồn cảm hứng của họ. Nhờ lòng tin vào thần thánh và siêu anh hùng,
+          nhờ nghe kể về cách thức các thần thánh, siêu anh hùng này giải quyết
+          mọi vấn đề, họ có thêm lòng tự tin để đi tới. Giống như với mọi dân
+          tộc vào mọi thời kỳ lịch sử, tín ngưỡng luôn đóng vai trò quan trọng
+          trong việc đem lại lòng can đảm để đối đầu với một tương lai bất định.
+          Những dữ liệu kỳ thú sau mỗi huyền thoại cũng được hệ thống rất hợp
+          lý, phân tích các yếu tố tạo nên tính hấp dẫn của câu chuyện làm cho
+          người đọc vừa thư giãn, vừa có thêm kiến thức và hình thành tính logic
+          và hệ thống trong tư duy đọc sách. Nội dung hấp dẫn, cách trình bày
+          hài hước, đa dạng kèm tranh minh họa vui nhộn. Sách thích hợp với các
+          bạn đọc từ 10 tuổi trở lên.
+        </p>
+      </div>
+      <div class="comments-section">
+        <h2>Bình luận</h2>
+        <textarea placeholder="Viết bình luận của bạn..."></textarea>
+        <button onclick="alert('Bình luận của bạn đã được gửi!')">Gửi</button>
+        <div class="comment">
+          <p><strong>Nguyễn Văn An:</strong> Cuốn sách rất hay và đáng đọc!</p>
+        </div>
+        <div class="comment">
+          <p>
+            <strong>Lê Quang Hùng:</strong> Cảm ơn thư viện đã chia sẻ cuốn sách
+            này.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>© 2024 THCS Nguyễn Trãi - Tất cả quyền được bảo lưu</footer>
+  </body>
+</html>
